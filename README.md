@@ -1,4 +1,4 @@
-# RESTAURANT-REVIEW-PROCESSING-USING-NLP
+# 🍽️ RESTAURANT-REVIEW-PROCESSING-USING-NLP
 🚀 Built an NLP pipeline to classify hotel reviews as positive/negative using NLTK + ML. Implemented KNN, Naive Bayes &amp; SVM, with SVM achieving best performance (~83% F1). Includes preprocessing, Bag of Words, and GridSearchCV tuning. Perfect for feedback analysis!
 
 This project performs **sentiment analysis** on hotel/restaurant reviews using **Natural Language Processing (NLP)** and machine learning classifiers.
@@ -103,28 +103,50 @@ Uses **GridSearchCV** with 5-fold cross-validation:
   ```
 
 The tuned model’s performance is evaluated on the test set.
+  
 
 ---
 
-## 📊 Example Output
+## 🚀 Features
+- Text preprocessing: stopword removal, stemming, and vectorization (Bag-of-Words).  
+- Model comparison: **KNN**, **SVC**, and **MNB**.  
+- Hyperparameter tuning with **GridSearchCV**.  
+- Evaluation using **Accuracy, Precision, Recall, F1-score**, and **Confusion Matrix**.  
 
+---
+
+## 📊 Model Performance (Before Tuning)
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|----------|-----------|--------|----------|
+| KNN   | 0.62     | 0.667     | 0.524  | 0.587    |
+| SVC   | 0.725    | 0.750     | 0.699  | 0.724    |
+| MNB   | 0.755    | 0.750     | 0.786  | 0.768    |
+
+---
+
+## 🔧 Hyperparameter Tuning (MNB)
+- Tuned parameter: **alpha = 0.5**  
+- Cross-validated F1: **0.771**  
+- Test F1 after tuning: **0.777**  
+
+### Confusion Matrix (MNB Tuned)
 ```
-Knn -> ACC: 0.7250, PREC: 0.7000, REC:0.7400, F1: 0.7200
-MNB -> ACC: 0.7800, PREC: 0.7700, REC:0.7900, F1: 0.7800
-SVC -> ACC: 0.8200, PREC: 0.8100, REC:0.8300, F1: 0.8200
 
-Best Model: SVC
-Running Hyperparameter Tuning for SVC...
-Best Parameters: {'C': 1, 'max_iter': 5000}
-Best Cross-Validated F1: 0.8235
-Tuned F1: 0.8350
+[[71 26]
+[21 82]]
 
-Confusion Matrix:
-[[78 12]
- [15 95]]
 ```
 
 ---
+
+## 🛠️ Tech Stack
+- **Python, NLTK, scikit-learn, NumPy, Pandas**  
+- **Jupyter Notebook / Spyder IDE**  
+
+---
+
+
 
 ## 🚀 How to Run
 
@@ -145,6 +167,19 @@ python sentiment_analysis.py
 * **Bag of Words** feature representation.
 * Comparing classifiers (KNN, Naive Bayes, SVM).
 * Importance of **hyperparameter tuning** for performance optimization.
+
+---
+
+## 📌 Future Improvements
+- Experiment with **TF-IDF & n-grams** for richer features.  
+- Deploy as a simple **Flask/Django web app**.  
+
+
+
+---
+
+## ✨ Author
+Developed by Ritik Maurya 👨‍💻  
 
 ---
 

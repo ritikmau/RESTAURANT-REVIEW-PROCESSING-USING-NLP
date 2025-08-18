@@ -20,7 +20,6 @@ The pipeline involves:
 
   * `Review`: The review text.
   * `Liked`: Target label (1 = Positive, 0 = Negative).
-
 ---
 
 ## ⚙️ Requirements
